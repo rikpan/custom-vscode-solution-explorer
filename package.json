@@ -1,10 +1,10 @@
 {
-	"name": "vscode-solution-explorer",
-	"displayName": "vscode-solution-explorer",
+	"name": "custom-vscode-solution-explorer",
+	"displayName": "custom-vscode-solution-explorer",
 	"description": "Visual Studio .sln file explorer for Visual Studio Code",
 	"version": "0.9.9",
 	"license": "MIT",
-	"publisher": "fernandoescolar",
+	"publisher": "rikpan",
 	"icon": "images/icon.png",
 	"author": {
 		"email": "f.escolar@hotmail.com",
@@ -13,10 +13,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/fernandoescolar/vscode-solution-explorer"
+		"url": "https://github.com/rikpan/custom-vscode-solution-explorer"
 	},
 	"bugs": {
-		"url": "https://github.com/fernandoescolar/vscode-solution-explorer/issues",
+		"url": "https://github.com/rikpan/custom-vscode-solution-explorer/issues",
 		"email": "f.escolar@hotmail.com"
 	},
 	"engines": {

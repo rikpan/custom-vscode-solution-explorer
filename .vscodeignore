@@ -1,0 +1,12 @@
+.git/**
+.gitignore
+.serena/**
+.vsixmanifest
+.vscodeignore
+scripts/**
+tests/**
+tools/**
+translations/**
+tsconfig.tests.json
+*.vsix
+**/*.bak

@@ -1,0 +1,3 @@
+*.vsix
+.tmp-tests/
+node_modules/
