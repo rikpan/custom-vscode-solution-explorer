@@ -2,7 +2,7 @@
 	"name": "custom-vscode-solution-explorer",
 	"displayName": "custom-vscode-solution-explorer",
 	"description": "Visual Studio .sln file explorer for Visual Studio Code",
-	"version": "0.9.10",
+	"version": "0.9.11",
 	"license": "MIT",
 	"publisher": "rikpan",
 	"icon": "images/icon.png",

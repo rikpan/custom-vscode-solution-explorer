@@ -2,6 +2,10 @@
 
 All notable changes to the "vscode-solution-explorer" extension will be documented in this file.
 
+## 0.9.11
+
+Unity `.meta` files follow their asset: moving, renaming or deleting a file or folder in the Solution Explorer also moves, renames or deletes its `.meta` file.
+
 ## 0.9.10
 
 Solutions are found and loaded in the background as soon as VS Code starts, so the tree is ready the first time the Solution Explorer view is shown.
