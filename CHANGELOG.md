@@ -2,6 +2,12 @@
 
 All notable changes to the "vscode-solution-explorer" extension will be documented in this file.
 
+## 0.9.10
+
+Solutions are found and loaded in the background as soon as VS Code starts, so the tree is ready the first time the Solution Explorer view is shown.
+
+While the view is hidden, the active file is located in the tree in the background, so it is selected right away when the view is shown.
+
 ## 0.9.9
 
 PR [#368](https://github.com/fernandoescolar/vscode-solution-explorer/issues/368): startup project. The project used by the active `.vscode/launch.json` configuration (or by `Properties/launchSettings.json`) is sorted first and its name is colored with the theme highlight color. Thanks to [RabitLogic](https://github.com/RabitLogic)
