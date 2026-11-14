@@ -2,6 +2,10 @@
 
 All notable changes to the "vscode-solution-explorer" extension will be documented in this file.
 
+## 0.9.12
+
+Keep keyboard focus in the editor when synchronizing the active file with the Solution Explorer, including deferred selection after loading the solution.
+
 ## 0.9.11
 
 Unity `.meta` files follow their asset: moving, renaming or deleting a file or folder in the Solution Explorer also moves, renames or deletes its `.meta` file.
