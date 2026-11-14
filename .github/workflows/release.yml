@@ -1,0 +1,72 @@
+name: Release
+
+# Pushing a tag "v<version>" packages the extension and publishes it as a GitHub
+# release with the .vsix attached, which is what installed copies update from
+# (see out/updater.js). Running the workflow by hand is a dry run: it tests and
+# packages, and keeps the .vsix as a workflow artifact without releasing anything.
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      # The updater compares the release's tag with the installed version, and expects
+      # the asset to be named after the version, so the two must agree.
+      - name: Check that the tag matches package.json
+        if: github.ref_type == 'tag'
+        run: |
+          version="$(node -p "require('./package.json').version")"
+          if [ "$GITHUB_REF_NAME" != "v$version" ]; then
+            echo "::error::Tag $GITHUB_REF_NAME does not match the version in package.json ($version). Expected the tag v$version."
+            exit 1
+          fi
+
+      # These tests run on the committed bundle and need no dependencies installed.
+      - name: Test
+        run: |
+          npm run test:updater
+          npm run test:editor-focus
+
+      - name: Package
+        run: node scripts/package-vsix.js "$RUNNER_TEMP/vsix"
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: vsix
+          path: ${{ runner.temp }}/vsix/*.vsix
+          if-no-files-found: error
+
+      - name: Publish the release
+        if: github.ref_type == 'tag'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          node scripts/release-notes.js > "$RUNNER_TEMP/notes.md"
+          if gh release view "$GITHUB_REF_NAME" > /dev/null 2>&1; then
+            # The release was created by hand, or this is a re-run: replace its .vsix.
+            gh release upload "$GITHUB_REF_NAME" "$RUNNER_TEMP"/vsix/*.vsix --clobber
+          else
+            flags=()
+            # "1.0.0-beta": a pre-release is not "latest", so the updater does not install it.
+            case "$GITHUB_REF_NAME" in *-*) flags+=(--prerelease) ;; esac
+            gh release create "$GITHUB_REF_NAME" "$RUNNER_TEMP"/vsix/*.vsix \
+              --title "$GITHUB_REF_NAME" --notes-file "$RUNNER_TEMP/notes.md" --verify-tag "${flags[@]}"
+          fi

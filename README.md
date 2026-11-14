@@ -324,6 +324,22 @@ This build is distributed as a `.vsix` through [GitHub Releases](https://github.
 
 A release is picked up when it is not a draft or pre-release, its tag is the version (`v0.9.13` or `0.9.13`) and it has a `.vsix` attached.
 
+#### Publishing a release
+
+Releases are built by the [Release workflow](.github/workflows/release.yml). To publish a version:
+
+1. Set the new version in `package.json` and add a `## <version>` section to `CHANGELOG.md`, which becomes the release notes.
+2. Commit, then tag the commit `v<version>` and push both:
+
+   ```
+   git tag v0.9.14
+   git push origin main v0.9.14
+   ```
+
+The workflow checks that the tag matches `package.json`, runs the tests, packages the `.vsix` and publishes the release with it attached. A tag with a suffix, such as `v1.0.0-beta`, is published as a pre-release, which installed copies ignore. Running the workflow by hand from the Actions tab is a dry run that only builds the `.vsix` as an artifact.
+
+`npm run package` builds the same `.vsix` locally.
+
 ## Extension Settings
 
 You can configure the extension in the Visual Studio Code settings panel:

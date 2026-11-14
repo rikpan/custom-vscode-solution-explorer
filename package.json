@@ -1069,6 +1069,7 @@
 		"precompile": "npm run translations:generate",
 		"compile": "webpack --mode development",
 		"watch": "webpack --mode development --watch",
+		"package": "node ./scripts/package-vsix.js",
 		"compile:tests": "tsc -p tsconfig.tests.json",
 		"test": "npm run test:unit",
 		"test:editor-focus": "node --test tests/editorFocus.test.cjs",
