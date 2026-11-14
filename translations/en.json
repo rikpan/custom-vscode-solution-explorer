@@ -8,6 +8,7 @@
     "command.addProjectReference.title": "Add reference",
     "command.addSolutionFile.title": "Add Solution File",
     "command.build.title": "Build",
+    "command.checkForUpdates.title": "Check for Updates",
     "command.clean.title": "Clean",
     "command.collapseAll.title": "Collapse All",
     "command.copy.title": "Copy",
@@ -81,6 +82,10 @@
     "config.showTerminalOnCommand.description": "Show the terminal when a command is executed.",
     "config.solutionExplorerIcons.description": "solution-explorer -> Uses the vscode-solution-explorer custom icons\nmix -> use current theme icons for files and folders\ncurrent-theme -> Uses the installed icon theme",
     "config.trackActiveItem.description": "Select the active editor file in the solution explorer.",
+    "config.update.mode.auto": "Download and install new versions automatically.",
+    "config.update.mode.description": "Controls how the extension updates itself from its GitHub releases.",
+    "config.update.mode.notify": "Ask before installing a new version.",
+    "config.update.mode.off": "Do not check for updates automatically. The \"Check for Updates\" command still works.",
     "config.win32Encoding.description": "Win32 codepage -> iconv.js encoding equivalences.",
     "config.xmlClosingTagSpace.description": "Add space at the end of XML closing tag, ex: \" />\"",
     "config.xmlspaces.description": "Spaces to be used for indenting XML output. It could be a number or an string. ex. \"2\", \" \" or \"\\t\".",
@@ -157,6 +162,17 @@
     "references": "references",
     "remove the selected projects": "remove the selected projects",
     "remove the selected references": "remove the selected references",
-    "warning: {0}": "warning: {0}"
+    "warning: {0}": "warning: {0}",
+    "An update check is already in progress.": "An update check is already in progress.",
+    "Checking for Solution Explorer updates...": "Checking for Solution Explorer updates...",
+    "Could not update Solution Explorer: {0}": "Could not update Solution Explorer: {0}",
+    "Downloading Solution Explorer {0}...": "Downloading Solution Explorer {0}...",
+    "Install Now": "Install Now",
+    "Release Notes": "Release Notes",
+    "Reload Window": "Reload Window",
+    "Skip This Version": "Skip This Version",
+    "Solution Explorer is up to date (version {0}).": "Solution Explorer is up to date (version {0}).",
+    "Solution Explorer {0} is available (installed: {1}).": "Solution Explorer {0} is available (installed: {1}).",
+    "Solution Explorer {0} has been installed. Reload the window to start using it.": "Solution Explorer {0} has been installed. Reload the window to start using it."
   }
 }

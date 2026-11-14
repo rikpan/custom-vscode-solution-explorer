@@ -8,6 +8,7 @@
     "command.addProjectReference.title": "Adicionar referência",
     "command.addSolutionFile.title": "Adicionar arquivo de solução",
     "command.build.title": "Compilar",
+    "command.checkForUpdates.title": "Verificar atualizações",
     "command.clean.title": "Limpar",
     "command.collapseAll.title": "Recolher tudo",
     "command.copy.title": "Copiar",
@@ -81,6 +82,10 @@
     "config.showTerminalOnCommand.description": "Mostra o terminal ao executar um comando.",
     "config.solutionExplorerIcons.description": "solution-explorer -> Usa os ícones personalizados do vscode-solution-explorer\nmix -> usa os ícones do tema atual para arquivos e pastas\ncurrent-theme -> Usa o tema de ícones instalado",
     "config.trackActiveItem.description": "Seleciona o arquivo do editor ativo no explorador de soluções.",
+    "config.update.mode.auto": "Baixar e instalar novas versões automaticamente.",
+    "config.update.mode.description": "Controla como a extensão se atualiza a partir das versões publicadas no GitHub.",
+    "config.update.mode.notify": "Perguntar antes de instalar uma nova versão.",
+    "config.update.mode.off": "Não verificar atualizações automaticamente. O comando \"Verificar atualizações\" continua disponível.",
     "config.win32Encoding.description": "Equivalências de página de códigos do Win32 -> codificação do iconv.js.",
     "config.xmlClosingTagSpace.description": "Adiciona um espaço no final da tag de fechamento XML, ex: \" />\"",
     "config.xmlspaces.description": "Espaços usados para indentar a saída XML. Pode ser um número ou uma string. ex. \"2\", \" \" ou \"\\t\".",
@@ -157,6 +162,17 @@
     "references": "referências",
     "remove the selected projects": "remover os projetos selecionados",
     "remove the selected references": "remover as referências selecionadas",
-    "warning: {0}": "aviso: {0}"
+    "warning: {0}": "aviso: {0}",
+    "An update check is already in progress.": "Já existe uma verificação de atualizações em andamento.",
+    "Checking for Solution Explorer updates...": "Verificando atualizações do Solution Explorer...",
+    "Could not update Solution Explorer: {0}": "Não foi possível atualizar o Solution Explorer: {0}",
+    "Downloading Solution Explorer {0}...": "Baixando o Solution Explorer {0}...",
+    "Install Now": "Instalar agora",
+    "Release Notes": "Notas de versão",
+    "Reload Window": "Recarregar janela",
+    "Skip This Version": "Ignorar esta versão",
+    "Solution Explorer is up to date (version {0}).": "O Solution Explorer está atualizado (versão {0}).",
+    "Solution Explorer {0} is available (installed: {1}).": "O Solution Explorer {0} está disponível (instalada: {1}).",
+    "Solution Explorer {0} has been installed. Reload the window to start using it.": "O Solution Explorer {0} foi instalado. Recarregue a janela para começar a usá-lo."
   }
 }

@@ -2,6 +2,10 @@
 
 All notable changes to the "vscode-solution-explorer" extension will be documented in this file.
 
+## 0.9.13
+
+Automatic updates from GitHub Releases: the extension checks once a day for a newer release, downloads its `.vsix`, verifies it and installs it, then offers to reload the window. The new `vssolution.update.mode` setting chooses between `auto`, `notify` and `off`, and the `Solution Explorer: Check for Updates` command checks on demand.
+
 ## 0.9.12
 
 Keep keyboard focus in the editor when synchronizing the active file with the Solution Explorer, including deferred selection after loading the solution.

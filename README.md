@@ -312,6 +312,18 @@ The extension's UI (commands, menus, settings descriptions and the panels above)
 
 > The `de`, `es`, `fr`, `pt-pt`, `pt-br` and `zh-cn` translations are AI-generated. If you're a native speaker and spot a mistake, contributions/corrections are very welcome.
 
+### Automatic updates
+
+This build is distributed as a `.vsix` through [GitHub Releases](https://github.com/rikpan/custom-vscode-solution-explorer/releases) instead of the Marketplace, so VS Code does not update it by itself. The extension does it instead:
+
+- Once a day it asks GitHub for the latest release. If its version is higher than the installed one, the release's `.vsix` is downloaded, checked against the SHA-256 that GitHub publishes for it, and installed. A notification then offers to reload the window, which is when the new version starts running.
+- A download that is interrupted is resumed where it stopped, immediately or at the next attempt an hour later, so a slow connection only delays the update.
+- If the GitHub API refuses the request because the anonymous quota of your IP address is used up (common behind a shared proxy), the latest release is found through the GitHub website instead. No checksum is available that way, and the `.vsix` must be named `custom-vscode-solution-explorer-<version>.vsix`.
+- `vssolution.update.mode` selects the behaviour: `auto` (default) installs without asking, `notify` asks first and lets you skip a version, `off` never checks on its own.
+- The `Solution Explorer: Check for Updates` command checks immediately, in any mode.
+
+A release is picked up when it is not a draft or pre-release, its tag is the version (`v0.9.13` or `0.9.13`) and it has a `.vsix` attached.
+
 ## Extension Settings
 
 You can configure the extension in the Visual Studio Code settings panel:
@@ -367,6 +379,8 @@ You can configure the extension in the Visual Studio Code settings panel:
 - `vssolution.defaultMsBuildPlatform` Default value for the `$(Platform)` MSBuild property used to evaluate `Condition` attributes when reading project files (default `"AnyCPU"`).
 
 - `vssolution.defaultMsBuildVersion` Value for the `$(MSBuildVersion)` reserved MSBuild property, since this extension does not invoke an actual build engine and so cannot detect it automatically.
+
+- `vssolution.update.mode` How the extension updates itself from its GitHub releases: `auto` (default) downloads and installs new versions, `notify` asks first, `off` disables the automatic check.
 
 ###### Example
 

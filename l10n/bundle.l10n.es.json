@@ -64,5 +64,16 @@
     "references": "referencias",
     "remove the selected projects": "quitar los proyectos seleccionados",
     "remove the selected references": "quitar las referencias seleccionadas",
-    "warning: {0}": "advertencia: {0}"
+    "warning: {0}": "advertencia: {0}",
+    "An update check is already in progress.": "Ya hay una búsqueda de actualizaciones en curso.",
+    "Checking for Solution Explorer updates...": "Buscando actualizaciones de Solution Explorer...",
+    "Could not update Solution Explorer: {0}": "No se pudo actualizar Solution Explorer: {0}",
+    "Downloading Solution Explorer {0}...": "Descargando Solution Explorer {0}...",
+    "Install Now": "Instalar ahora",
+    "Release Notes": "Notas de la versión",
+    "Reload Window": "Recargar ventana",
+    "Skip This Version": "Omitir esta versión",
+    "Solution Explorer is up to date (version {0}).": "Solution Explorer está actualizado (versión {0}).",
+    "Solution Explorer {0} is available (installed: {1}).": "Solution Explorer {0} está disponible (instalada: {1}).",
+    "Solution Explorer {0} has been installed. Reload the window to start using it.": "Se ha instalado Solution Explorer {0}. Recargue la ventana para empezar a usarlo."
 }

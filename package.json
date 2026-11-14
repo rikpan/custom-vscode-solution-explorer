@@ -2,7 +2,7 @@
 	"name": "custom-vscode-solution-explorer",
 	"displayName": "custom-vscode-solution-explorer",
 	"description": "Visual Studio .sln file explorer for Visual Studio Code",
-	"version": "0.9.12",
+	"version": "0.9.13",
 	"license": "MIT",
 	"publisher": "rikpan",
 	"icon": "images/icon.png",
@@ -362,6 +362,11 @@
 			{
 				"command": "solutionExplorer.invalidateNugetCache",
 				"title": "%command.invalidateNugetCache.title%",
+				"category": "%category.solutionExplorer%"
+			},
+			{
+				"command": "solutionExplorer.checkForUpdates",
+				"title": "%command.checkForUpdates.title%",
 				"category": "%category.solutionExplorer%"
 			}
 		],
@@ -1038,6 +1043,22 @@
 					"type": "boolean",
 					"default": true,
 					"description": "%config.nuget.codeCompletions.description%"
+				},
+				"vssolution.update.mode": {
+					"type": "string",
+					"enum": [
+						"auto",
+						"notify",
+						"off"
+					],
+					"enumDescriptions": [
+						"%config.update.mode.auto%",
+						"%config.update.mode.notify%",
+						"%config.update.mode.off%"
+					],
+					"default": "auto",
+					"scope": "application",
+					"description": "%config.update.mode.description%"
 				}
 			}
 		}
@@ -1051,6 +1072,7 @@
 		"compile:tests": "tsc -p tsconfig.tests.json",
 		"test": "npm run test:unit",
 		"test:editor-focus": "node --test tests/editorFocus.test.cjs",
+		"test:updater": "node --test tests/updater.test.cjs",
 		"test:unit": "npm run compile:tests && node --require ./scripts/register-test-aliases.js --test .tmp-tests/tests/**/*.test.js",
 		"translations:generate": "node ./scripts/generate-all-translations.js",
 		"translations:merge": "node ./scripts/merge-translations.js",

@@ -8,6 +8,7 @@
     "command.addProjectReference.title": "添加引用",
     "command.addSolutionFile.title": "添加解决方案文件",
     "command.build.title": "生成",
+    "command.checkForUpdates.title": "检查更新",
     "command.clean.title": "清理",
     "command.collapseAll.title": "全部折叠",
     "command.copy.title": "复制",
@@ -81,6 +82,10 @@
     "config.showTerminalOnCommand.description": "执行命令时显示终端。",
     "config.solutionExplorerIcons.description": "solution-explorer -> 使用 vscode-solution-explorer 的自定义图标\nmix -> 对文件和文件夹使用当前主题的图标\ncurrent-theme -> 使用已安装的图标主题",
     "config.trackActiveItem.description": "在解决方案资源管理器中选择活动的编辑器文件。",
+    "config.update.mode.auto": "自动下载并安装新版本。",
+    "config.update.mode.description": "控制扩展如何通过 GitHub Releases 自行更新。",
+    "config.update.mode.notify": "安装新版本前先询问。",
+    "config.update.mode.off": "不自动检查更新，仍可使用“检查更新”命令手动检查。",
     "config.win32Encoding.description": "Win32 代码页与 iconv.js 编码的对应关系。",
     "config.xmlClosingTagSpace.description": "在 XML 结束标记末尾添加空格，例如：\" />\"",
     "config.xmlspaces.description": "用于缩进 XML 输出的空格。可以是数字或字符串，例如 \"2\"、\" \" 或 \"\\t\"。",
@@ -157,6 +162,17 @@
     "references": "引用",
     "remove the selected projects": "移除所选项目",
     "remove the selected references": "移除所选引用",
-    "warning: {0}": "警告：{0}"
+    "warning: {0}": "警告：{0}",
+    "An update check is already in progress.": "更新检查正在进行中。",
+    "Checking for Solution Explorer updates...": "正在检查 Solution Explorer 更新...",
+    "Could not update Solution Explorer: {0}": "无法更新 Solution Explorer：{0}",
+    "Downloading Solution Explorer {0}...": "正在下载 Solution Explorer {0}...",
+    "Install Now": "立即安装",
+    "Release Notes": "发行说明",
+    "Reload Window": "重新加载窗口",
+    "Skip This Version": "跳过此版本",
+    "Solution Explorer is up to date (version {0}).": "Solution Explorer 已是最新版本（{0}）。",
+    "Solution Explorer {0} is available (installed: {1}).": "Solution Explorer {0} 已发布（当前版本：{1}）。",
+    "Solution Explorer {0} has been installed. Reload the window to start using it.": "Solution Explorer {0} 已安装，重新加载窗口后生效。"
   }
 }

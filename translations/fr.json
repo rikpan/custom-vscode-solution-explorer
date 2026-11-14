@@ -8,6 +8,7 @@
     "command.addProjectReference.title": "Ajouter une référence",
     "command.addSolutionFile.title": "Ajouter un fichier de solution",
     "command.build.title": "Générer",
+    "command.checkForUpdates.title": "Rechercher les mises à jour",
     "command.clean.title": "Nettoyer",
     "command.collapseAll.title": "Tout réduire",
     "command.copy.title": "Copier",
@@ -81,6 +82,10 @@
     "config.showTerminalOnCommand.description": "Affiche le terminal lors de l'exécution d'une commande.",
     "config.solutionExplorerIcons.description": "solution-explorer -> Utilise les icônes personnalisées de vscode-solution-explorer\nmix -> utilise les icônes du thème actuel pour les fichiers et dossiers\ncurrent-theme -> Utilise le thème d'icônes installé",
     "config.trackActiveItem.description": "Sélectionne le fichier de l'éditeur actif dans l'explorateur de solutions.",
+    "config.update.mode.auto": "Télécharger et installer automatiquement les nouvelles versions.",
+    "config.update.mode.description": "Contrôle la façon dont l'extension se met à jour à partir de ses versions publiées sur GitHub.",
+    "config.update.mode.notify": "Demander avant d'installer une nouvelle version.",
+    "config.update.mode.off": "Ne pas rechercher automatiquement les mises à jour. La commande « Rechercher les mises à jour » reste disponible.",
     "config.win32Encoding.description": "Équivalences entre pages de codes Win32 et encodage iconv.js.",
     "config.xmlClosingTagSpace.description": "Ajoute un espace à la fin de la balise de fermeture XML, ex : \" />\"",
     "config.xmlspaces.description": "Espaces utilisés pour l'indentation de la sortie XML. Peut être un nombre ou une chaîne. ex. \"2\", \" \" ou \"\\t\".",
@@ -157,6 +162,17 @@
     "references": "références",
     "remove the selected projects": "supprimer les projets sélectionnés",
     "remove the selected references": "supprimer les références sélectionnées",
-    "warning: {0}": "avertissement : {0}"
+    "warning: {0}": "avertissement : {0}",
+    "An update check is already in progress.": "Une recherche de mises à jour est déjà en cours.",
+    "Checking for Solution Explorer updates...": "Recherche de mises à jour de Solution Explorer...",
+    "Could not update Solution Explorer: {0}": "Impossible de mettre à jour Solution Explorer : {0}",
+    "Downloading Solution Explorer {0}...": "Téléchargement de Solution Explorer {0}...",
+    "Install Now": "Installer maintenant",
+    "Release Notes": "Notes de publication",
+    "Reload Window": "Recharger la fenêtre",
+    "Skip This Version": "Ignorer cette version",
+    "Solution Explorer is up to date (version {0}).": "Solution Explorer est à jour (version {0}).",
+    "Solution Explorer {0} is available (installed: {1}).": "Solution Explorer {0} est disponible (version installée : {1}).",
+    "Solution Explorer {0} has been installed. Reload the window to start using it.": "Solution Explorer {0} a été installé. Rechargez la fenêtre pour commencer à l'utiliser."
   }
 }
